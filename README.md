@@ -2,11 +2,10 @@
 #go to git bash
 # use command :
 - vagrant init
-# for the file
+# to upload the vagrant use:
 - vagrant up
-#to upload the vagrant
-- vagrant ssh
 # to go to the vm(virtualmachine)
+- vagrant ssh
 
 ##before vagrant up however you need to  change the vagrantfile
 
@@ -14,14 +13,16 @@
 
  - config.vm.box = "ubuntu/xenial64"
 
-##then to to ubuntu
+##then to ubuntu
 
 #to set the private ip to to the necessary you have to enter this code:
 
 - config.vm.network "private_network", ip: "192.168.10.100"
+
 ##also this for development.local
 - config.hostsupdater.aliases = ["development.local"]
 #then to automatise create  a provision.sh files
+
 # with the necessary commands
 # to make provision work add the config to vagrantfile:
 ``config.vm.provision "shell", path: "provision.sh"``
